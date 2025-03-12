@@ -16,7 +16,6 @@ html {
 }
 body {
     font-family: "Open Sans", sans-serif;
-    height: 900vb;
 }
 ul {
     list-style: none;
@@ -242,21 +241,21 @@ header nav i {
     transform: translateY(-50%);
     color: white;
 }
-.landing ul {
+.landing .bullets {
     position: absolute;
     display: flex;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
 }
-.landing ul li {
+.landing .bullets li {
     width: 20px;
     height: 20px;
-    border: 1px solid white;
+    border: 1px solid #aaaa;
     border-radius: 50%;
     margin-right: 10px;
 }
-.landing ul .active {
+.landing .bullets .active {
     background-color: var(--main-color);
     border-color: var(--main-color);
 }
@@ -556,3 +555,430 @@ header nav i {
     font-size: 14px;
 }
 /* End Stats */
+/* Start Our Skills */
+.our-skills {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+}
+.our-skills .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+@media (min-width: 992px) {
+    .our-skills .container > div {
+        flex-basis: 45%;
+    } 
+}
+.our-skills .container > div > h3 {
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+} 
+.our-skills .container > div > p {
+    color: var(--font-color);
+    line-height: 2;
+    margin-bottom: 60px;
+    text-align: center;
+} 
+.testimonials .skill {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+.testimonials .skill img {
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+@media (max-width: 767px) {
+    .testimonials .skill {
+        flex-direction: column;
+        text-align: center;
+    }
+    .testimonials .skill img {
+       margin: 0 auto 20px;
+    }
+}
+.testimonials .skill .text {
+    line-height: 1.8;
+    border-bottom: 2px solid #ccc;
+}
+.testimonials .skill .text p {
+    display: flex;
+    justify-content: flex-end;
+    color: var(--font-color);
+    margin-bottom: 15px;
+}
+.testimonials .bullets {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+.testimonials .bullets li {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.testimonials .bullets .active {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+.skills .prog-holder {
+    margin-bottom: 20px;
+}
+.skills .prog-holder h3 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.skills .prog-holder .prog {
+    height: 30px;
+    background-color: #aaa;
+}
+.skills .prog-holder span {
+    height: 100%;
+    background-color: var(--main-color);
+    display: flex;
+    position: relative;
+}
+.skills .prog-holder span::before {
+    content: attr(data-progress);
+    position: absolute;
+    background-color: black;
+    color: white;
+    top: -38px;
+    right: -17.9px;
+    border-radius: 3px;
+    padding: 3px;
+}
+.skills .prog-holder span::after {
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black transparent transparent;
+    right: -9px;
+    top: -14px;
+}
+.quote {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+    background-image: url(../Images/quote.jpg);
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+.quote::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 80%);
+}
+.quote .container {
+    position: relative;
+    color: white;
+}
+.quote .container q {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 20px;
+}
+.quote .container span {
+    font-size: 14px;
+}
+/* End Our Skills */
+/* Start Pricing */
+.pricing {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+}
+.pricing .price-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px,1fr));
+    grid-gap: 30px;
+}
+
+.price-top {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+.price-top p {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 20px 0;
+}
+.price-top span {
+    font-weight: bold;
+    font-size: 60px;
+    position: relative;
+}
+.price-top span::before {
+    content: "$";
+    position: absolute;
+    font-size: 20px;
+    top: 0;
+    left: -20px;
+}
+.price-top span::after {
+    content: "/Mo";
+    position: absolute;
+    font-size: 20px;
+    bottom: 0px;
+    right: -45px;
+}
+.price-mid {
+    text-align: center;
+    border-bottom: 1px solid var(--main-color);
+    margin-bottom: 20px;
+}
+.price-mid p {
+    padding: 20px;
+    position: relative;
+}
+.price-mid p::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: var(--main-color);
+    width: 140px;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.price .a {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    border: 1px solid var(--main-color);
+    width: fit-content;
+}
+.special-request {
+    margin-top: var(--padding);
+    text-align: center;
+    font-size: 20px;
+}
+.special-request a {
+    display: block;
+    margin: 20px auto;
+    background-color: var(--main-color);
+    width: fit-content;
+    padding: 15px 20px;
+    color: white;
+}
+/* End Pricing */
+/* Start Subscribe */
+.subscribe {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+    background-image: url(../Images/subscribe.jpg);
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+.subscribe::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 60%);
+}
+.subscribe .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 991px) {
+    .subscribe .container {
+       flex-direction: column;
+       flex-wrap: wrap;
+    }
+}
+.subscribe .container form {
+    position: relative;
+    display: flex;
+    width: 500px;
+    max-width: 100%;
+}
+.subscribe .container form i {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translatey(-50%);
+}
+.subscribe .container form input[type="email"] {
+    position: relative;
+    border: 1px solid white;
+    border-right: none;
+    background: none;
+    padding: 20px 20px 20px 60px;
+    width: calc(100% - 130px);
+    caret-color: var(--main-color);
+}
+.subscribe .container form input[type="email"]:focus,
+.subscribe .container form .button {
+    outline: none;
+}
+.subscribe .container form input[type="email"]::placeholder {
+    color: white;
+}
+.subscribe .container form .button {
+    width: 130px;
+    border: 1px solid white;
+    border-left: none;
+    color: white;
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+.subscribe .container p {
+    margin-left: 50px;
+    line-height: 2;
+}
+@media (max-width: 991px) {
+    .subscribe .container p {
+        margin: 30px 0 0;
+    }
+}
+/* End Subscribe */
+/* Start Contact Us */
+.contact-us {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+}
+.contact-us .container .contact-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+@media (max-width:767px) {
+    .contact-us .container .contact-section {
+        flex-direction: column;
+    }
+}
+.contact-us form {
+    flex-basis: 70%;
+}
+.contact-us form input[type="text"] {
+    display: flex;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 100%;
+}
+.contact-us form input[type="email"] {
+    display: flex;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 100%;
+}
+.contact-us form textarea[name="text"] {
+    display: flex;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 100%;
+    height: 200px;
+}
+.contact-us form input[type="submit"] {
+    display: flex;
+    padding: 20px;
+    text-transform: uppercase;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    margin-left: auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-us form input[type="email"]:focus,
+.contact-us form textarea[name="text"]:focus,
+.contact-us form input[type="text"]:focus {
+    outline: none;
+}
+.contact-us .info {
+    flex-basis: 25%;
+}
+@media (max-width:767px) {
+    .contact-us .info {
+       order: -1;
+       text-align: center;
+       margin-bottom: 40px;
+    }
+}
+.contact-us .info h4 {
+    font-weight: normal;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.contact-us .info span {
+        display: block;
+        color: var(--font-color);
+        line-height: 2;
+        font-size: 14px;
+}
+.contact-us .info h4:last-of-type {
+    margin-top: 75px;
+}
+.contact-us .info address {
+    color: var(--font-color);
+    line-height: 2;
+}
+/* End Contact Us */
+/* Start footer */
+.footer {
+    padding-top: calc(var(--padding) / 2);
+    padding-bottom: calc(var(--padding) / 2);
+    background-image: url(../Images/subscribe.jpg);
+    background-size: cover;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+.footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 70%);
+}
+.footer .container {
+    position: relative;
+}
+.footer .container img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+.footer .container p {
+    font-size: 22px;
+    padding: 20px;
+    border-bottom: 1px solid;
+    width: fit-content;
+    margin: 20px auto;
+    text-transform: uppercase;
+}
+.footer .container .foot-icons i {
+    padding: 10px 15px;
+}
+.footer .container .foot-text {
+    margin-top: 60px;
+}
+.footer .container .foot-text span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+/* End footer */
